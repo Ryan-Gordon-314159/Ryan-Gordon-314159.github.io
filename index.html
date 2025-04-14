@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Software Engineering Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --section-bg: #f0f0f0;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #1e1e1e;
+      --text-color: #ffffff;
+      --section-bg: #2c2c2c;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      background-color: var(--section-bg);
+    }
+
+    .profile-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ccc;
+    }
+
+    .theme-toggle {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 2rem;
+      background-color: var(--section-bg);
+      margin: 1rem;
+      border-radius: 10px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .project {
+      margin-bottom: 2rem;
+    }
+
+    .project img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      margin-top: 0.5rem;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body data-theme="light">
+
+  <header>
+    <img src="Ryan-Gordon-Pic.png" alt="Your Image" class="profile-image">
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Light/Dark Mode</button>
+  </header>
+
+  <section>
+    <h2>Contact and Personal Information</h2>
+    <p>Email: your.email@example.com</p>
+    <p>Phone: +1 (123) 456-7890</p>
+    <p>
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>Resume/CV</h2>
+    <div class="buttons">
+      <a href="resume.pdf" download>Download Resume</a>
+      <a href="cv.pdf" download>Download CV</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Software Engineering for Scientists Program at IBM Research</h3>
+
+      <h4>Machine Learning</h4>
+      <p>Details, skills, and <a href="#">project link</a> here.</p>
+
+      <h4>Cloud Computing</h4>
+      <p>Details, skills, and <a href="#">project link</a> here.</p>
+
+      <h4>Data Engineering</h4>
+      <p>Details, skills, and <a href="#">project link</a> here.</p>
+
+      <h4>Data Science</h4>
+      <p>Details, skills, and <a href="#">project link</a> here.</p>
+    </div>
+
+    <div class="project">
+      <h3>Other Project Title</h3>
+      <p>Description of the project goes here. Include tools, languages, and outcomes.</p>
+      <pre><code>// Example code snippet
+function greet(name) {
+  return `Hello, ${name}`;
+}
+</code></pre>
+      <a href="#">View Code</a>
+      <img src="project-image.jpg" alt="Project Screenshot">
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>Python, JavaScript, Java, C++</li>
+      <li>React, Node.js, Flask, Django</li>
+      <li>Docker, Kubernetes, AWS, GCP</li>
+      <li>SQL, NoSQL, MongoDB, PostgreSQL</li>
+      <li>Git, CI/CD, Agile Development</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
+    <ul>
+      <li>Title of Publication 1 – <i>Journal Name, Year</i></li>
+      <li>Title of Publication 2 – <i>Conference Name, Year</i></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Patents</h2>
+    <ul>
+      <li>Patent Title 1 – Patent Number</li>
+      <li>Patent Title 2 – Patent Number</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Hobbies</h2>
+    <p>Outside of software engineering, I enjoy hiking, photography, music, and writing fiction.</p>
+  </section>
+
+  <section>
+    <h2>Awards and Recognition</h2>
+    <ul>
+      <li>Best Paper Award at XYZ Conference (2023)</li>
+      <li>IBM Technical Award (2022)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Personal Projects</h2>
+    <ul>
+      <li><strong>Project Name</strong> – Brief description and <a href="#">GitHub Link</a></li>
+      <li><strong>Another Project</strong> – Description and <a href="#">Link</a></li>
+    </ul>
+  </section>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const currentTheme = body.getAttribute("data-theme");
+      body.setAttribute("data-theme", currentTheme === "light" ? "dark" : "light");
+    }
+  </script>
+
+</body>
+</html>
