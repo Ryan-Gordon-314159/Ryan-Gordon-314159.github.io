@@ -1,59 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Software Engineering Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Software Engineering Portfolio for Ryan T. Gordon, Ph.D.</title>
   <style>
     :root {
-      --bg-color: #ffffff;
-      --text-color: #000000;
-      --section-bg: #f0f0f0;
-    }
-
-    [data-theme="dark"] {
-      --bg-color: #1e1e1e;
-      --text-color: #ffffff;
-      --section-bg: #2c2c2c;
+      --light-bg: #e6f0ff;
+      --light-text: #000;
+      --dark-bg: #0d1b2a;
+      --dark-text: #f0f8ff;
+      --accent-blue: #1e3a8a;
+      --light-blue: #93c5fd;
+      --medium-blue: #3b82f6;
+      --dark-blue: #1e40af;
     }
 
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
+      background-color: var(--light-bg);
+      color: var(--light-text);
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background-color: var(--dark-bg);
+      color: var(--dark-text);
     }
 
     header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem;
-      background-color: var(--section-bg);
+      background-color: var(--accent-blue);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
     }
 
-    .profile-image {
-      width: 120px;
-      height: 120px;
+    header img {
+      max-width: 200px;
+      height: auto;
       border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #ccc;
+      margin-top: 1rem;
     }
 
-    .theme-toggle {
-      padding: 0.5rem 1rem;
-      cursor: pointer;
+    .nav-links {
+      background-color: var(--medium-blue);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     section {
-      padding: 2rem;
-      background-color: var(--section-bg);
-      margin: 1rem;
-      border-radius: 10px;
+      padding: 2rem 1rem;
+      border-bottom: 1px solid #ccc;
     }
 
     h2 {
-      margin-top: 0;
+      color: var(--dark-blue);
+    }
+
+    button {
+      background-color: var(--dark-blue);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      margin: 0.5rem 0;
+      border-radius: 5px;
     }
 
     .project {
@@ -63,137 +86,216 @@
     .project img {
       max-width: 100%;
       height: auto;
-      border: 1px solid #ddd;
-      margin-top: 0.5rem;
     }
 
-    .buttons a {
-      text-decoration: none;
-      margin-right: 1rem;
-      padding: 0.5rem 1rem;
-      border: none;
-      background-color: #007BFF;
-      color: white;
-      border-radius: 5px;
+    .subsection {
+      margin-left: 1rem;
+      padding-left: 1rem;
+      border-left: 2px solid var(--medium-blue);
     }
 
-    ul {
-      padding-left: 20px;
+    .toggle-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
     }
+
   </style>
 </head>
-<body data-theme="light">
-
+<body>
   <header>
-    <img src="Ryan-Gordon-Pic.png" alt="Your Image" class="profile-image">
-    <button class="theme-toggle" onclick="toggleTheme()">Toggle Light/Dark Mode</button>
+    <h1>Software Engineering Portfolio for Ryan T. Gordon, Ph.D.</h1>
+    <button class="toggle-btn" onclick="toggleMode()">Toggle Light/Dark Mode</button>
+    <img src="Ryan-Gordon-Pic.png" alt="Candid photo of Ryan T. Gordon" id="profile-image">
   </header>
 
-  <section>
+  <nav class="nav-links">
+    <a href="#contact">Contact & Info</a>
+    <a href="#resume">Resume & CV</a>
+    <a href="#projects">Projects</a>
+    <a href="#ibm-program">IBM Program</a>
+    <a href="#skills">Skills</a>
+    <a href="#publications">Publications</a>
+    <a href="#patents">Patents</a>
+    <a href="#education">Education</a>
+    <a href="#awards">Awards</a>
+    <a href="#hobbies">Hobbies</a>
+  </nav>
+
+  <section id="contact">
     <h2>Contact and Personal Information</h2>
-    <p>Email: your.email@example.com</p>
-    <p>Phone: +1 (123) 456-7890</p>
-    <p>
-      <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-    </p>
+    <p>Email: <a href="mailto:your.email@example.com">rtg314159@gmail.com</a></p>
+    <p>Phone: (309) 255-6871</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile">https://www.linkedin.com/in/ryan-gordon-b33891a6</a></p>
+    <p>GitHub: <a href="https://github.com/Ryan-Gordon-314159">https://github.com/Ryan-Gordon-314159</a></p>
   </section>
 
-  <section>
-    <h2>Resume/CV</h2>
-    <div class="buttons">
-      <a href="resume.pdf" download>Download Resume</a>
-      <a href="cv.pdf" download>Download CV</a>
-    </div>
+  <section id="resume">
+    <h2>Resume and CV</h2>
+    <button onclick="window.location.href='Resume_Ryan-T-Gordon.pdf'">Download Resume</button>
+    <button onclick="window.location.href='CV_Ryan_T_Gordon.pdf'">Download CV</button>
   </section>
 
-  <section>
+  <section id="projects">
     <h2>Projects</h2>
-
     <div class="project">
-      <h3>Software Engineering for Scientists Program at IBM Research</h3>
-
-      <h4>Machine Learning</h4>
-      <p>Details, skills, and <a href="#">project link</a> here.</p>
-
-      <h4>Cloud Computing</h4>
-      <p>Details, skills, and <a href="#">project link</a> here.</p>
-
-      <h4>Data Engineering</h4>
-      <p>Details, skills, and <a href="#">project link</a> here.</p>
-
-      <h4>Data Science</h4>
-      <p>Details, skills, and <a href="#">project link</a> here.</p>
-    </div>
-
-    <div class="project">
-      <h3>Other Project Title</h3>
-      <p>Description of the project goes here. Include tools, languages, and outcomes.</p>
-      <pre><code>// Example code snippet
-function greet(name) {
-  return `Hello, ${name}`;
+      <h3>Large-Scale Data Processing with Python Pipelines for AI Model Training at IBM Research</h3>
+      <p>Description of the project, what it does, how it works, and technologies used.</p>
+      <!-- <pre><code>// Code snippet example
+function example() {
+  console.log("Hello, world!");
 }
-</code></pre>
-      <a href="#">View Code</a>
-      <img src="project-image.jpg" alt="Project Screenshot">
+</code></pre> -->
+      <p><a href="https://github.com/yourprojectlink">View Project on GitHub</a></p>
+      <!-- <img src="project-image.jpg" alt="Screenshot or image of project"> -->
+    </div>
+    <div class="project">
+        <h3>Building a Python SDK for Iterative Fine-Tuning of Models Utilizing a Generative AI System</h3>
+        <p>Description of the project, what it does, how it works, and technologies used.</p>
+        <!-- <pre><code>// Code snippet example
+  function example() {
+    console.log("Hello, world!");
+  }
+  </code></pre> -->
+        <p><a href="https://github.com/yourprojectlink">a</a></p>
+        <!-- <img src="project-image.jpg" alt="Screenshot or image of project"> -->
+      </div>
+    <div class="project">
+        <h3>Development Work on data-prep-kit, an IBM Research Product for enabling AI researchers in Data Preparation for LLM Applications</h3>
+        <p>Description of the project, what it does, how it works, and technologies used.</p>
+        <!-- <pre><code>// Code snippet example
+  function example() {
+    console.log("Hello, world!");
+  }
+  </code></pre> -->
+        <p><a href="https://github.com/data-prep-kit/data-prep-kit">View the Open Source Version of the Project on GitHub</a></p>
+        <!-- <img src="project-image.jpg" alt="Screenshot or image of project"> -->
+      </div>
+      <div class="project">
+        <h3>Developing Software for Investigating Two-Qubit Gate Fidelity vs Repetition Rate</h3>
+        <p>Description of the project, what it does, how it works, and technologies used.</p>
+        <!-- <pre><code>// Code snippet example
+  function example() {
+    console.log("Hello, world!");
+  }</code></pre> -->
+      <p><a href="https://github.com/yourprojectlink">View Project on GitHub</a></p>
+      <!-- <img src="project-image.jpg" alt="Screenshot or image of project"> -->
+    </div>
+    <div class="project">
+        <h3>Building a Python SDK for Iterative Fine-Tuning of Models Utilizing a Generative AI System</h3>
+        <p>Description of the project, what it does, how it works, and technologies used.</p>
+        <!-- <pre><code>// Code snippet example
+  function example() {
+    console.log("Hello, world!");
+  }
+  </code></pre> -->
+        <p><a href="https://github.com/yourprojectlink">View Project on GitHub</a></p>
+        <!-- <img src="project-image.jpg" alt="Screenshot or image of project"> -->
+      </div>
+      <div class="project">
+        <h3>Developing Software for Investigating Two-Qubit Gate Fidelity vs Repetition Rate</h3>
+        <p>Description of the project, what it does, how it works, and technologies used.</p>
+        <!-- <pre><code>// Code snippet example
+  function example() {
+    console.log("Hello, world!");
+  }
+
+  </code></pre> -->
+      <p><a href="https://github.com/yourprojectlink">View Project on GitHub</a></p>
+      <!-- <img src="project-image.jpg" alt="Screenshot or image of project"> -->
+    </div>
+    <div class="project">
+        <h3>Building a Python SDK for Iterative Fine-Tuning of Models Utilizing a Generative AI System</h3>
+        <p>Description of the project, what it does, how it works, and technologies used.</p>
+        <!-- <pre><code>// Code snippet example
+  function example() {
+    console.log("Hello, world!");
+  }
+  </code></pre> -->
+        <p><a href="https://github.com/yourprojectlink">View Project on GitHub</a></p>
+        <!-- <img src="project-image.jpg" alt="Screenshot or image of project"> -->
+      </div>
+
+  <section id="ibm-program">
+    <h2>Software Engineering for Scientists Program at IBM Research</h2>
+    <p>I completed a 10-month long program offered by IBM Research while employed there that consisted of four learning parts focused on cutting edge software skills, outlined below, plus an
+        end project that I did with a team in the AI Program at IBM Research. For the project, I build a Python SDK to interact with an IBM-internal generative AI system.
+    </p>
+    <div class="subsection">
+      <h3>Machine Learning</h3>
+      <p>Details, skills, and links related to ML projects.</p>
+    </div>
+    <div class="subsection">
+      <h3>Cloud Computing</h3>
+      <p>Cloud tools, deployments, and technologies used.</p>
+    </div>
+    <div class="subsection">
+      <h3>Data Engineering</h3>
+      <p>Data pipeline, transformation, storage techniques.</p>
+    </div>
+    <div class="subsection">
+      <h3>Data Science</h3>
+      <p>Analytics, visualization, modeling, tools used.</p>
     </div>
   </section>
 
-  <section>
+  <section id="skills">
     <h2>Skills</h2>
     <ul>
-      <li>Python, JavaScript, Java, C++</li>
-      <li>React, Node.js, Flask, Django</li>
-      <li>Docker, Kubernetes, AWS, GCP</li>
-      <li>SQL, NoSQL, MongoDB, PostgreSQL</li>
-      <li>Git, CI/CD, Agile Development</li>
+      <li>Python, JavaScript, C++, Java</li>
+      <li>React, Node.js, Django, Flask</li>
+      <li>Docker, Kubernetes, AWS, Azure</li>
+      <li>Machine Learning, Deep Learning, TensorFlow</li>
+      <li>SQL, NoSQL, PostgreSQL, MongoDB</li>
+      <li>Git, CI/CD, Agile methodologies</li>
     </ul>
   </section>
 
-  <section>
+  <section id="publications">
     <h2>Publications</h2>
     <ul>
-      <li>Title of Publication 1 – <i>Journal Name, Year</i></li>
-      <li>Title of Publication 2 – <i>Conference Name, Year</i></li>
+        <li>This section is currently under construction</li>
+        <!-- <li>Title of Publication 1 - <em>Journal Name</em> (Year)</li> -->
+      <!-- <li>Title of Publication 2 - <em>Conference Name</em> (Year)</li> -->
     </ul>
   </section>
 
-  <section>
+  <section id="patents">
     <h2>Patents</h2>
     <ul>
-      <li>Patent Title 1 – Patent Number</li>
-      <li>Patent Title 2 – Patent Number</li>
+        <li>This section is currently under construction</li>
+        <!-- <li>Patent Title 1 – Patent Number</li> -->
+      <!-- <li>Patent Title 2 – Patent Number</li> -->
     </ul>
   </section>
 
-  <section>
-    <h2>Hobbies</h2>
-    <p>Outside of software engineering, I enjoy hiking, photography, music, and writing fiction.</p>
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>Ph.D., Physics, Iowa State University (2011)</li>
+      <li>B.S. Physics and Mathematics (Double-Major), Western Illinois University (2005)</li>
+    </ul>
   </section>
 
-  <section>
+  <section id="awards">
     <h2>Awards and Recognition</h2>
     <ul>
-      <li>Best Paper Award at XYZ Conference (2023)</li>
-      <li>IBM Technical Award (2022)</li>
+        <li>This section is currently under construction</li>  
+      <!-- <li>Best Paper Award – Conference Name (Year)</li> -->
+      <!-- <li>IBM Research Fellowship (Year)</li> -->
     </ul>
   </section>
 
-  <section>
-    <h2>Personal Projects</h2>
-    <ul>
-      <li><strong>Project Name</strong> – Brief description and <a href="#">GitHub Link</a></li>
-      <li><strong>Another Project</strong> – Description and <a href="#">Link</a></li>
-    </ul>
+  <section id="hobbies">
+    <h2>Hobbies</h2>
+    <p>This section is currently under construction</p>
+    <!-- <p>I enjoy hiking, photography, playing guitar, and volunteering for STEM outreach programs.</p> -->
   </section>
 
   <script>
-    function toggleTheme() {
-      const body = document.body;
-      const currentTheme = body.getAttribute("data-theme");
-      body.setAttribute("data-theme", currentTheme === "light" ? "dark" : "light");
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
     }
   </script>
-
 </body>
 </html>
