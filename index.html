@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Software Engineering Portfolio for Ryan T. Gordon, Ph.D.</title>
+  <style>
+    :root {
+      --light-bg: #e6f0ff;
+      --light-text: #000;
+      --dark-bg: #0d1b2a;
+      --dark-text: #f0f8ff;
+      --accent-blue: #1e3a8a;
+      --light-blue: #93c5fd;
+      --medium-blue: #3b82f6;
+      --dark-blue: #1e40af;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--light-bg);
+      color: var(--light-text);
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background-color: var(--dark-bg);
+      color: var(--dark-text);
+    }
+
+    header {
+      background-color: var(--accent-blue);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 50%;
+      margin-top: 1rem;
+    }
+
+    .nav-links {
+      background-color: var(--medium-blue);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      border-bottom: 1px solid #ccc;
+    }
+
+    h2 {
+      color: var(--dark-blue);
+    }
+
+    button {
+      background-color: var(--dark-blue);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      margin: 0.5rem 0;
+      border-radius: 5px;
+    }
+
+    .project {
+      margin-bottom: 2rem;
+    }
+
+    .project img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .subsection {
+      margin-left: 1rem;
+      padding-left: 1rem;
+      border-left: 2px solid var(--medium-blue);
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Software Engineering Portfolio for Ryan T. Gordon, Ph.D.</h1>
+    <button class="toggle-btn" onclick="toggleMode()">Toggle Light/Dark Mode</button>
+    <img src="Ryan-Gordon-Pic.png" alt="Candid photo of Ryan T. Gordon" id="profile-image">
+  </header>
+
+  <nav class="nav-links">
+    <a href="#about"><u>About Ryan</u></a>
+    <a href="#contact"><u>Contact & Info</u></a>
+    <a href="#resume"><u>Resume & CV</u></a>
+    <a href="#personal-projects"><u>Personal Projects</u></a>
+    <a href="#ibm-ai-projects"><u>IBM Research AI Projects</u></a>
+    <a href="#ibm-qc-projects"><u>IBM Research Quantum Computing Projects</u></a>
+    <a href="#course-projects"><u>Projects from Courses</u></a>
+    <a href="#skills"><u>Skills</u></a>
+    <a href="#publications"><u>Publications</u></a>
+    <a href="#patents"><u>Patents</u></a>
+    <a href="#education"><u>Education</u></a>
+    <a href="#awards"><u>Awards</u></a>
+    <a href="#hobbies"><u>Hobbies</u></a>
+  </nav>
+  
+  <section id="about">
+    <h2>About Ryan</h2>
+    <p>Ryan Gordon, Ph.D. is a Software Engineer and Physicist living in Yorktown Heights, NY. Most recently, Ryan was a Research Staff Member at IBM Research's T.J. Watson Research Center.
+      While there, Ryan worked in the Quantum Computing and Artificial Intelligence Programs. Continue reading below to learn more about the details of Ryan's software engineering experience.</p>
+
+  </section>
+
+  <section id="contact">
+    <h2>Contact and Personal Information</h2>
+    <p>Email: <a href="mailto:your.email@example.com">rtg314159@gmail.com</a></p>
+    <p>Phone: (309) 255-6871</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile">https://www.linkedin.com/in/ryan-gordon-b33891a6</a></p>
+    <p>GitHub: <a href="https://github.com/Ryan-Gordon-314159">https://github.com/Ryan-Gordon-314159</a></p>
+  </section>
+
+  <section id="resume">
+    <h2>Resume and CV</h2>
+    <button onclick="window.location.href='Resume_Ryan-T-Gordon.pdf'">Download Resume</button>
+    <button onclick="window.location.href='CV_Ryan_T_Gordon.pdf'">Download CV</button>
+  </section>
+
+  <section id="personal-projects">
+    <h2>Personal Projects in Software Engineering</h2>
+    <div class="project">
+      <h3>1) Software Engineering Portfolio Site</h3>
+      <p>In this project, I build this Software Engineering Portfolio website that you are currently visiting to display details about the different projects that I've worked on as a software engineer. This website was built using HTML and it is hosted by GitHub.</p>
+      <ul>
+        <li>HTML</li>
+        <li>Git, GitHub</li>
+      </ul>
+      <!-- <pre><code>// Code snippet example
+function example() {
+  console.log("Hello, world!");
+}
+</code></pre> -->
+      <p><a href="https://github.com/Ryan-Gordon-314159/Ryan-Gordon-314159.github.io">Link to GitHub Project for this Software Engineering Portolio</a></p>
+      <!-- <img src="project-image.jpg" alt="Screenshot or image of project"> -->
+    </div>
+  </section>
+  <section id="ibm-ai-projects">
+    <h2> IBM Research AI Projects in Software Engineering</h2>
+    <div class="project">
+      <h3>1) Large-Scale Data Processing with Python Pipelines for AI Model Training</h3>
+      <p>For this project, I developed, maintained, and continuously updated Python pipelines for doing large-scale data processing to train AI models at IBM Research. I was also responsible for running these pipelines to process datasets ~100 TB
+         for preparing training data for creating AI models. Additionally, I was involved with doing triage for this processing, as it was extremely high priority and very resource intensive. For this work, I was awarded an IBM Research Award to recognize my contributions.</p>
+      <p>Skills for this Project:</p>
+      <ul>
+        <li>Python, SQL</li>
+        <li>Distributed Computing, Kubernetes, Docker, Kubeflow Pipelines, Argo Pipelines, Ray, OpenShift, Data Processing Pipelines, Algorithms, Data Structures, Debugging, Triage</li>
+        <li>Data Engineering, Data Lakehouses, Relational Databases, AWS, IBM Cloud</li>
+        <li>Artificial Intelligence (AI), Machine Learning, AI Models, LLMs, Natural Language Processing (NLP), Model Training, Tokenization, Deduplication (Exact and Fuzzy) Removal, HAP (Hate, Abuse, and Profanity) Removal, Annotation</li>
+        <li>Git, GitHub, CI/CD, Agile Methodologies</li>
+      </ul>
+      <!-- <pre><code>// Code snippet example
+function example() {
+  console.log("Hello, world!");
+}
+</code></pre> -->
+      <p>Note: My contributions for this project were made using an IBM Enterprise GitHub account due to the confidential nature of AI model creation at IBM Research. The open source version of this repository is linked below for reference.</p>
+      <p><a href="https://github.com/foundation-model-stack/foundation-model-stack/tree/main">Link to IBM Open Source Repository on GitHub</a></p>
+      <!-- <img src="project-image.jpg" alt="Screenshot or image of project"> -->
+    </div>
+    <div class="project">
+        <h3>2) Building a Python SDK for Iterative Fine-Tuning of Models Utilizing a Generative AI System</h3>
+        <p>In this work, I created a Python software development kit (SDK) for fine tuning models on user-supplied datasets using IBM's internal Big AI Model (BAM) for doing retrieval augmented generation (RAG). In addition to fine tuning, this SDK was capable of anlyzing
+          the log-prob values from the system's responses from the first fine tuning process. From this additional learning, I was
+          able to show that the performance of the fine tuneed model is further improved after the learning from the log-prob data is used to further train the model on the supplied dataset.
+        </p>
+        <p>Skills for this Project:</p>
+        <ul>
+          <li>Python</li>
+          <li>Generative AI, Retrieval Augmented Generation (RAG), Fine Tuning, Classification, Natural Language Processing</li>
+          <li>Test-Driven Development, Algorithms, Data Structures </li>
+        </ul>  
+        <p>Note: The work was done under an IBM Enterprise GitHub account and it is confidential, so there is not an open source analog that I can use to illustrate this work.</p>
+
+        <!-- <pre><code>// Code snippet example
+  function example() {
+    console.log("Hello, world!");
+  }
+  </code></pre> -->
+        <!-- <p><a href="https://github.com/yourprojectlink">a</a></p> -->
+        <!-- <img src="project-image.jpg" alt="Screenshot or image of project"> -->
+      </div>
+    <div class="project">
+        <h3>3) Development Work on /data-prep-kit, an IBM Research Product for Enabling AI Researchers in Data Preparation for LLM Applications</h3>
+        <p>In this project, I wrote a data processing transform, helped to test the recommended procedure for setting up the repository to do development as a test user, and I helped compile documentation for various parts of this work. The transform that I wrote was for doing language identification
+        and it is called the lang_id transform. It will identify the language for a given text with a confidence score using the fasttext language identification model.
+        </p>
+        <p>Skills for this Project:</p>
+        <ul>
+          <li>Python</li>
+          <li>Data Processing Pipelines, LLMs, NLP</li>
+          <li>Git, GitHub, CI/CD, Agile Methodologies</li>
+        </ul>  
+        <p>Note: The work I did for developing the lang_id transoform was done in an IBM Enterprise GitHub account, but please see below for a link to the open source version of the lang_id transform. .</p>
+
+        <!-- <pre><code>// Code snippet example
+  function example() {
+    console.log("Hello, world!");
+  }
+  </code></pre> -->
+        <p><a href="https://github.com/Ryan-Gordon-314159/data-prep-kit/tree/dev/transforms/language/lang_id">View the Open Source Version of the lang_id Transform on GitHub</a></p>
+        <!-- <img src="project-image.jpg" alt="Screenshot or image of project"> -->
+      </div>
+    </section>
+    <section id="ibm-qc-projects">
+      <h2> IBM Research Quantum Computing Projects in Software Engineering</h2>
+      <div class="project">
+        <h3> 1) Developing Software for Investigating Two-Qubit Gate Fidelity vs Repetition Rate in IBM's State-of-the-Art Multi-Qubit Quantum Processors</h3>
+        <p>I was the Project Manager for this project at IBM Research, where I led a team of 5 people on developing the software necessary for collecting data on large, Multi-Qubit
+          processors to directly measure how the two-qubit gate fidelities are limited in performance as quantum circuits are run faster and faster on them. As a result, our team was able to build
+          high quality visualizations to see exactly how these curves of gate fidelity vs repition rate look for a large number of pairs of interacting qubits, across multiple processors. This data was
+          used by the IBM Research senior management for assessing milestones related to state-of-the-art quantum processors and to develop future goals for the quantum volume metric in the Quantum Computing Program at IBM Research.
+        </p>
+        <p>Skills for this Project:</p>
+        <ul>
+          <li>Python, Pandas, Numpy, Matplotlib, Pyplot, Jupyter Notebooks, Scikit-learn</li>
+          <li>Quantum Computing, Multi-Qubit Physics</li>
+          <li>Visualization, Machine Learning, Image Classifiers</li>
+        </ul>  
+        <p>Note: This work was done using an IBM Enterprise GitHub account, so unfortunately I am unable to provide the details for this software due to its confidential nature.</p>
+        <!-- <pre><code>// Code snippet example
+  function example() {
+    console.log("Hello, world!");
+  }</code></pre> -->
+      <!-- <p><a href="https://github.com/yourprojectlink">View Project on GitHub</a></p> -->
+      <!-- <img src="project-image.jpg" alt="Screenshot or image of project"> -->
+    </div>
+    <div class="project">
+        <h3> 2) Studying Environmental Impact on Qubit Performance Using Python Automation for High-Throughput Measurements</h3>
+        <p>As the Project Manager for this work, I led a team of 10 people to investigate how the lifetimes of quantum bits, qubits, are impacted by various factors in their operating environment, utilizing Python automation that I contributed to developing. During this project, we studied how qubits can be sensitive
+          to electromagnetic radiation by varying the amount of shielding that is used around them during the measurement of such quantities as relaxation time, coherence time, and dephasing time. Our team also looked at the impact on the qubits from controlled variations in temperature, exposure to radioactivity
+          , magnetism, and vibrations. This project taught us much about engineering the environment for the qubits to maximize their performance for quantum computation and the results are summarized in the peer-reviewed publication linked just below. Additionally, a new qubit package was engineered with the
+          learning from this project and incorporated into the design, which produced the highest relaxation time ever reported for a superconducting transmon qubit. See the link below to the Twitter announcemnt for reaching this milestone.
+        </p>
+        <p>Skills for this Project:</p>
+        <ul>
+          <li>Python, Pandas, Numpy, Matplotlib, Pyplot, Visualizations</li>
+          <li>Git, GitHub</li>
+          <li>Quantum Computing, Data Analysis</li>
+          <li>Test-Driven Development, Algorithms, Data Structures </li>
+        </ul>  
+
+        <p><a href="https://pubs.aip.org/aip/apl/article-abstract/120/7/074002/2833253/Environmental-radiation-impact-on-lifetimes-and?redirectedFrom=fulltext">Link to Peer-Reviewed Article Summarizing this work</a></p>
+
+        <p><a href="https://x.com/jaygambetta/status/1395347923123245056">Link to Twitter Announcement for Record-Breaking Relaxation Time</a></p>
+        <!-- <pre><code>// Code snippet example
+  function example() {
+    console.log("Hello, world!");
+  }
+  </code></pre> -->
+        <!-- <p><a href="https://github.com/yourprojectlink">View Project on GitHub</a></p> -->
+        <!-- <img src="project-image.jpg" alt="Screenshot or image of project"> -->
+      </div>
+     
+    <div class="project">
+        <h3>3) Automation of Qubit Characterization and Calibration Procedures for Single-Qubit Testing at IBM Research</h3>
+        <p>As my first project at IBM Research, I worked on a cross-functional team whose goal was to improve qubit relaxation times, otherwise known as T1, for quantum computing applications. As a software engineer, my goal was to automate the process of measuring qubit T1 for a standard IBM package allowing for a high throughput
+           for device measurement. This automation process involved communicating with a variety of instruments, ranging from those that control the qubit's temperature inside of the dilution refrigerator environment in which they are measured, to instrument that send microwave pulses to the qubits to characterize their T1 values.
+           This work resulted in Python automation that was able to measure the T1 values for an entire IBM package consisting of hundreds of qubits, as soon as the device has cooled below 20 mK, all without any user intervention. This automation capability allowed for quick turnaround in measuring IBM qubit packaging and a rapid
+           increase in the T1 values of our teams qubits.
+        </p>
+
+        <p>Skills for this Project:</p>
+        <ul>
+          <li>Python, Pandas, Numpy, Matplotlib, Pyplot, Visualizations</li>
+          <li>Git, GitHub</li>
+          <li>Quantum Computing, Data Analysis</li>
+          <li>Test-Driven Development, Algorithms, Data Structures </li>
+        </ul>  
+
+        <p>Note: This work was done using an IBM Enterprise GitHub account, so unfortunately I am unable to provide the details for this software due to its confidential nature.</p>
+
+        <!-- <pre><code>// Code snippet example
+  function example() {
+    console.log("Hello, world!");
+  }
+  </code></pre> -->
+        <!-- <p><a href="https://github.com/yourprojectlink">View Project on GitHub</a></p> -->
+        <!-- <img src="project-image.jpg" alt="Screenshot or image of project"> -->
+      </section>
+      <section id="course-projects">
+      <h2>Software Engineering Projects from Courses (Sponsored by IBM Research)</h2>
+      <div class="project">
+        <p>I completed a 10-month long program offered by IBM Research, called the Software Engineering for Scientists Program, that consisted of four learning phases focused on cutting edge software skills, outlined below with certificate links, plus an
+          end project that I did with a team in the AI Program at IBM Research. For the project, I build a Python SDK to interact with an IBM-internal generative AI system. There were also 4 hackathon events for us to work together in teams
+          after each learning phase for us to use our newly learned skills to solve a very difficult software engineering problem.
+      </p>
+        <h3>Learning Phases for the Software Engineering for Scientists Program:</h3>
+        <p>Note: Click each link below to view the corresponding certificate for a single course or an overall certificate for a set of multiple courses.</p>
+        <div class="subsection">
+          <h3>1) IBM DevOps and Software Engineering (Coursera)</h3>
+          <p><a href="https://coursera.org/verify/professional-cert/DHHDHDUZFWCY">Link to Coursera professional certificate for this 14-course series</a></p>
+          <ul>
+            <li><a href="https://coursera.org/verify/SRRA4FFLXMFX">Course 1: Introduction to DevOps</a></li>
+            <li><a href="https://www.credly.com/go/kh99Uejz">Course 2: Introduction to Cloud Computing</a></li>
+            <li><a href="https://coursera.org/verify/LCX7HX23Y7LR">Course 3: Introduction to Agile Development and Scrum</a></li>
+            <li><a href="https://coursera.org/verify/S4TAHFSPF5CH">Course 4: Introduction to Software Engineering</a></li>
+            <li><a href="https://coursera.org/verify/9BUUGARCMXT9">Course 5: Hands-on Introduction to Linux Commands and Shell Scripting</a></li>
+            <li><a href="https://coursera.org/verify/Y44GBA3CS4HA">Course 6: Getting Started with Git and Github</a></li>
+            <li><a href="https://coursera.org/verify/DPRLV7GRVZ7W">Course 7: Python for Data Science, AI, and Development</a></li>
+            <li><a href="https://coursera.org/verify/AXDKS423DXVA">Course 8: Python Project for AI and Application Development</a></li>
+            <li><a href="https://coursera.org/verify/G8HXNJMWVNZJ">Course 9: Introduction to Containers with Docker, Kubernetes, and OpenShift</a></li>
+            <li><a href="https://www.coursera.org/account/accomplishments/verify/P6XUKE82JV9V">Course 10: Application Development using Microservices and Serverless</a></li>
+            <li><a href="https://coursera.org/verify/586H65XLGN73">Course 11: Introduction to Test Driven Development (TDD)</a></li>
+            <li><a href="https://coursera.org/verify/S4MBJMHC63G5">Course 12: Continuous Integration and Continuous Delivery (CI/CD)</a></li>
+            <li><a href="https://coursera.org/verify/BHM2KQFHD57Y">Course 13: Application Security and Monitoring</a></li>
+            <li><a href="https://coursera.org/verify/Q22LUYYNY9BS">Course 14: DevOps Capstone Project</a></li>
+            <li><a href="https://coursera.org/verify/B3VDQPY5N4LK">Additional Course: Advanced Application Management with Redhat OpenShift</a></li>
+          </ul>
+          <p>Skills from this learning:</p>
+          <ul>
+            <li>Software Architecture, Cloud, Cloud Native, Containers, DevOps, IaaS, IBM Cloud, Multicloud, PaaS, SaaS</li>
+            <li>ETL, Shell Scripting, Linux, Bash</li>
+            <li>Zenhub, Sprint Planning, Kanban, Scrum, Agile</li>
+            <li>Distributed Version Control, Cloning and Forking, Open Source, GitHub, Git</li>
+            <li>Pandas, Data Analysis, Data Science, Numpy, Python</li>
+            <li>Software Testing, Web Applicaiton Development, Flask</li>
+            <li>Kubernetes, Openshift, Containers, Docker</li>
+            <li>CI/CD, Automation, Infrastructre As Code</li>
+            <li>Test-Driven Development, Test Cases, Behavior-Driven Development, Automated Testing</li>
+            <li>Cloud Applications, Serverless, REST APIs, Microservices</li>
+            <li>Security, Logging, Monitoring, Open Web Application Security Project, Observability</li>
+            <li>Cloud Computing, Cloud Platforms</li>
+          </ul>
+        </div>
+        <div class="subsection">
+          <h3>2) Data Engineering with AWS (Udacity)</h3>
+          <p><a href="https://confirm.udacity.com/e/c218928a-f3fc-11ed-9c7b-9739210a9965">Link to Udacity Nanodegree certificate for this course series</a></p>
+          <ul>
+            <li>Course 1: Data Modeling</li>
+            <li>Course 2: Cloud Data Warehouses</li>
+            <li>Course 3: Spark and Data Lakes</li>
+            <li>Course 4: Automate Data Pipelines</li>
+          </ul>
+          <p>Skills from this learning:</p>
+          <ul>
+            <li>Database Fundamentals, Cassandradb, PostgreSQL, Database Normalization, Denormalized Data Schemas, Data Modeling Basics, Star Schemas</li>
+            <li>Data Extraction, Olap Cubes, Table Design, Cloud Computing Fluency, ETL, AWS Storage Services, Table Partioning, Online Transaction Processing, AWS Data Warehouse, Redshift, Data Warehouse Architecture, Amazon S3</li>
+            <li>AWS Data Lakes, ELT, Big Data Fluency, Data Wrangling, Amazon Athena, Data Lakehouse Architecture, Apache Spark, Data Format Fundamentals, AWS Glue, Data Lakes, Data Transformation</li>
+            <li>Apache Airflow, Data Pipeline DAGs, Data Pipeline Partioning, Data Pipeline Maintenance, Data Pipeline Creation, Data Lineage</li>
+          </ul>
+        </div>
+        <div class="subsection">
+          <h3>3) Data Science for Scientists (Udacity)</h3>
+          <p><a href="https://confirm.udacity.com/e/ee0aaf8c-1b4c-11ee-9b05-e727a2f8604e">Link to Udacity Nanodegree certificate for this course series</a></p>
+          <ul>
+            <li>Course 1: Introduction to Data Science</li>
+            <li>Course 2: Supervised Learning</li>
+            <li>Course 3: Unsupervised Learning</li>
+            <li>Course 4: Create Your Own Image Classifier 2.0</li>
+          </ul>
+          <p>Skills from this learning:</p>
+          <ul>
+            <li>Overview of the Data Science Process</li>
+            <li>Supervised Learning, Unsupervised Learning, Gradient Decent, Neural Networks, PyTorch</li>
+            <li>Similarity Score, Principal Component Analysis, Dimensionality Reduction, Recommendation Engines, Cluster Validation, K-means Clustering, Feature Visualization, Matrix Factorization, Hierarchical Clustering Models, Business Metrics</li>
+          </ul>
+        </div>
+        <div class="subsection">
+          <h3>4) Machine Learning Engineering for Scientists (Udacity and Hugging Face)</h3>
+          <ul>
+            <li><a href="https://confirm.udacity.com/e/4d163c0e-3087-11ee-a949-7f62989bcdc8">Course (Udacity): Clean Code Principles</a></li>
+            <li>Course (Hugging Face): Natural Language Processing</li>
+          </ul>
+          <p>Skills from this learning:</p>
+          <ul>
+            <li>Clean Code Principles</li>
+            <li>Linting, Pylint</li>
+
+          </ul>
+        </div>
+      </section>
+        <!-- <pre><code>// Code snippet example
+  function example() {
+    console.log("Hello, world!");
+  }
+  </code></pre> -->
+        <!-- <p><a href="https://github.com/Ryan-Gordon-314159/Ryan-Gordon-314159.github.io">Link to GitHub Project for this Software Engineering Portolio</a></p> -->
+        <!-- <img src="project-image.jpg" alt="Screenshot or image of project"> -->
+
+
+  <section id="skills">
+    <h2>Comprehensive List of Software Engineering Skills</h2>
+    <ul>
+      <li>Languages: Python, SQL, Java, C++, HTML, CSS</li>
+      <li>Operating Systems and CLI: Shell Scripting, Linux, Bash, Unix</li>
+      <!-- <li>Markdown Languages and Data Formatting: HTML, CSS, JSON, YAML</li> -->
+      <li>Python Libraries and Tooling: Numpy, Pandas, Matplotlib, Pyplot, Scikit-learn, PyTorch, Flask</li>
+      <li>Containerized Development: Kubernetes, Openshift, Docker, Podman</li>
+      <li>Distributed Computing: Ray, Apache Spark, ELT and ETL Pipelines, Data Processing Pipelines, Kubeflow and Argo Pipelines, Super-Pipeline Development </li>
+      <li>Data Engineering: SQL, NoSQL, PostgreSQL, Cassandradb MongoDB, Relational and Non-Relational Databases, ETL and ELT Pipelines</li>
+      <li>Cloud Computing: Cloud Native, AWS, S3, IBM Cloud, REST APIs, Data Warehouses, AWS Data Warehouse, Data Lakehouse, Microservices, Serverless, Redshift, </li>
+      <li>Distributed Version Control and Software Methodologies: Git, GitHub, Automation, Infrastructure as Code, CI/CD, Agile Methodologies, DevOps, DevSecOps, ZenHub, Kanban, Sprint Planning, Scrum</li>
+      <li>Software Testing and Logging: Test-Driven Development, Test Case Design, Automated Testing, Logging, Monitoring, Linting, Debugging</li>
+      <li>Machine Learning: Natural Language Processing (NLP), Large Language Models (LLMs), Model Training, Fine Tuning, Generative AI, Retrieval Augmented Generation (RAG), Neural Networks, PyTorch, Hugging Face</li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <ul>
+        <li>This section is currently under construction</li>
+        <!-- <li>Title of Publication 1 - <em>Journal Name</em> (Year)</li> -->
+      <!-- <li>Title of Publication 2 - <em>Conference Name</em> (Year)</li> -->
+    </ul>
+  </section>
+
+  <section id="patents">
+    <h2>Patents</h2>
+    <ol>
+        <li>User Feedback System On Product Usage, Patent ID: 12141812 (Granted 11/11/2024)</li>
+        <li>Electroplated Metal Layer On A Niobium-titanium Substrate, Patent ID: 11735802 (Granted 8/21/2023)</li>
+        <li>Qubits with Ion Implant Josephson Junctions, Patent ID: 11538977 (Granted 12/26/2022)</li>
+        <li>Cognitive Alert System (Patent 1 of 2 with same title), Patent ID: 11179539 (Granted 11/22/2021)</li>
+        <li>Cognitive Alert System (Patent 2 of 2 with same title), Patent ID: 11179540 (Granted 11/22/2021)</li>
+        <li>Process-specific views of large frame pages with variable granularity, Patent ID: 10295983 (Granted 9/27/2021)</li>
+        <li>Natural Language Processor For Using Speech To Cognitively Detect and Analyze Deviations from a Baseline, Patent ID: 11133026 (Granted 9/27/2021)</li>
+        <li>Contextual And Differentiated Augmented-Reality Worlds (Patent 1 of 2 with same title), Patent ID: 10953329 (Granted 3/22/2021)</li>
+        <li>Autonomous Operation Of An Electrical Power Outlet Device, Patent ID: 10935951 (Granted 3/1/2021)</li>
+        <li>Superconducting Switch Thermometer Array, Patent ID: 10677659 (Granted 3/1/2021)</li>
+        <li>Contextual And Differentiated Augmented-Reality Worlds (Patent 2 of 2 with same title), Patent ID: 10589173 (Granted 3/16/2020)</li>
+        <!-- <li>Patent Title 1 – Patent Number</li> -->
+      <!-- <li>Patent Title 2 – Patent Number</li> -->
+    </ol>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>Ph.D., Physics, Iowa State University (2011)</li>
+      <li>B.S. Physics and Mathematics (Double-Major), Western Illinois University (2005)</li>
+    </ul>
+  </section>
+
+  <section id="awards">
+    <h2>Select Awards and Recognition</h2>
+    <ul>
+      <li>IBM Research AI Program Award: Granite 3.0 Release (2024)</li>
+      <li>IBM Research Quantum Computing Program Award: A Standard Multi-Qubit Device Packaging: Sandy (2024)</li>
+      <li>Graduate Student Teaching Award, Iowa State University (2007)</li>
+      <li>Physics Departmental Scholar, Western Illinois University (2005), Sole Recipient</li>
+      <li>Honors College Scholar, Western Illinois University (2005), Sole Recipient</li>
+      <li>Barry M. Goldwater Scholarship (2004)</li>  
+      <li>Phi Kappa Phi National Scholarship (2004)</li>  
+      <!-- <li>Best Paper Award – Conference Name (Year)</li> -->
+      <!-- <li>IBM Research Fellowship (Year)</li> -->
+    </ul>
+  </section>
+
+  <section id="hobbies">
+    <h2>Hobbies</h2>
+    <p>In my free time, I enjoy hiking, playing lots of musical instruments, cooking, and gardening.</p>
+    <!-- <p>I enjoy hiking, photography, playing guitar, and volunteering for STEM outreach programs.</p> -->
+  </section>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
